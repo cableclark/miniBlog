@@ -2,17 +2,10 @@
 session_start();
 
 spl_autoload_register(function ($className) {
-require $className . ".Class.php";
-
-}
-
+  require $className . ".Class.php";
+  }
 );
 
-// require 'Conn.Class.php';
-// require 'Login.Class.php';
-// require 'User.Class.php';
-// require 'Vesti.Class.php';
-// require 'Signup.Class.php';
 
 if (isset($_POST['logout'])) {
           unset($_SESSION["user"]);
